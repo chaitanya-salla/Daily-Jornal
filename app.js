@@ -39,7 +39,6 @@ app.post('/compose', (req,res) => {
 
 app.get('/posts/:individualPost', (req,res) => { 
   const route = req.params.individualPost;
-  console.log(route);
   posts.forEach(post => {
     if(post.title === route) {
       res.render('post', { post })
